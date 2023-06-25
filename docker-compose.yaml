@@ -1,0 +1,13 @@
+version: "3.8"
+
+services: 
+  front: 
+    container_name: phases_client
+    restart: unless-stopped
+    image: phases
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: Development
+    ports:
+      - 5173:5173
